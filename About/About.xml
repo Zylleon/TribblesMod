@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ModMetaData>
+  <name>Tribbles</name>
+  <author>Zylle</author>
+  <packageId>zylle.Tribbles</packageId>
+  <supportedVersions>
+	<!-- <li>1.0</li> -->
+	<li>1.1</li>
+	<li>1.2</li>
+  </supportedVersions>
+  <description>Tribbles are small, loveable, useless creatures that reproduce asexually. They will sneak in, bond with everyone and eat all your food. Try to keep their population under control.
+  
+  There will be no announcement when tribbles join your colony, or when they reproduce. They eat almost anything and ignore all zone restrictions. 
+  
+  Tribbles will sometimes be offered for sale by traders.
+  
+  Safe to add mid-game, removing it may cause trouble.
+
+  -----
+
+Discord: https://discord.gg/4EFv76C
+ko-fi: https://ko-fi.com/zylleon
+My other mods: https://steamcommunity.com/profiles/76561197998830956/myworkshopfiles/?appid=294100
+</description>
+</ModMetaData>
