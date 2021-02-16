@@ -41,10 +41,10 @@
         <li>
           <def>AnimalAdult</def>
           <minAge>0</minAge>
-          <soundWounded>Pawn_Hare_Wounded</soundWounded>
-          <soundDeath>Pawn_Hare_Death</soundDeath>
-          <soundCall>Pawn_Hare_Call</soundCall>
-          <soundAngry>Pawn_Hare_Angry</soundAngry>
+          <soundWounded>ZTrib_Pawn_Tribble_Wounded</soundWounded>
+          <soundDeath>ZTrib_Pawn_Tribble_Death</soundDeath>
+          <soundCall>ZTrib_Pawn_Tribble_Call</soundCall>
+          <soundAngry>ZTrib_Pawn_Tribble_Angry</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -79,7 +79,7 @@
     <uiIconScale>1.5</uiIconScale>
 	<comps>
 		<li Class="ZTribble.CompProperties_TribbleSpawner">
-			<baseSpawnInterval>0.4</baseSpawnInterval>
+			<baseSpawnInterval>0.3~1.0</baseSpawnInterval>
 		</li>
     </comps>
   </ThingDef>
