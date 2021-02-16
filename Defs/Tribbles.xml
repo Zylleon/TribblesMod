@@ -21,9 +21,12 @@
       </li>
     </tools>
     <race>
+      <thinkTreeMain>ZTrib_Tribble</thinkTreeMain>
+      <thinkTreeConstant>ZTrib_Tribble_Constant</thinkTreeConstant>
+	  
       <body>QuadrupedAnimalWithPawsAndTail</body>
       <baseBodySize>0.2</baseBodySize>
-      <baseHungerRate>2.0</baseHungerRate>
+      <baseHungerRate>3.0</baseHungerRate>
       <baseHealthScale>0.4</baseHealthScale>
       <foodType>OmnivoreRoughAnimal, DendrovoreAnimal</foodType>
       <!-- <useMeatFrom>Squirrel</useMeatFrom> -->
@@ -79,7 +82,8 @@
     <uiIconScale>1.5</uiIconScale>
 	<comps>
 		<li Class="ZTribble.CompProperties_TribbleSpawner">
-			<baseSpawnInterval>0.3~1.0</baseSpawnInterval>
+			<!-- <baseSpawnInterval>0.3~1.0</baseSpawnInterval> -->
+			<baseSpawnInterval>0.0~1.4</baseSpawnInterval>
 		</li>
     </comps>
   </ThingDef>
