@@ -5,8 +5,9 @@
   <ThingDef Abstract="True" ParentName="AnimalThingBase" Name="ZTrib_BaseTribble">
     <statBases>
       <MoveSpeed>2.0</MoveSpeed>
-      <MarketValue>50</MarketValue>
+      <MarketValue>30</MarketValue>
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <ComfyTemperatureMax>80</ComfyTemperatureMax>
     </statBases>
     <tools>
       <li>
@@ -23,10 +24,11 @@
     <race>
       <thinkTreeMain>ZTrib_Tribble</thinkTreeMain>
       <thinkTreeConstant>ZTrib_Tribble_Constant</thinkTreeConstant>
+      <canBePredatorPrey>false</canBePredatorPrey>
 	  
       <body>QuadrupedAnimalWithPawsAndTail</body>
       <baseBodySize>0.2</baseBodySize>
-      <baseHungerRate>3.0</baseHungerRate>
+      <baseHungerRate>3.5</baseHungerRate>
       <baseHealthScale>0.4</baseHealthScale>
       <foodType>OmnivoreRoughAnimal, DendrovoreAnimal</foodType>
       <!-- <useMeatFrom>Squirrel</useMeatFrom> -->
@@ -64,7 +66,7 @@
   <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="ZTrib_TribbleBase">
     <combatPower>33</combatPower>
     <ecoSystemWeight>0.25</ecoSystemWeight>
-    <defaultFactionType>PlayerColony</defaultFactionType>
+    <!-- <defaultFactionType>PlayerColony</defaultFactionType> -->
     <canArriveManhunter>false</canArriveManhunter>
   </PawnKindDef>
 

@@ -7,7 +7,22 @@
     <defName>ZTrib_Tribble</defName>
     <thinkRoot Class="ThinkNode_Priority">
       <subNodes>
-        <!-- Keep lying down if we have to -->
+        
+        
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>BurningResponse</treeDef>
+        </li>
+		<li Class="ThinkNode_ConditionalStarving">
+			
+			<subNodes>
+				<li Class="JobGiver_GetFood"/>
+			</subNodes>
+			
+		</li>
+		<!-- Keep lying down if we have to -->
         <li Class="ThinkNode_ConditionalMustKeepLyingDown">
           <subNodes>
             <!-- Do a queued job if possible -->
@@ -19,13 +34,6 @@
             <li Class="JobGiver_KeepLyingDown" />
           </subNodes>
         </li>
-        
-        <li Class="ThinkNode_Subtree">
-          <treeDef>Downed</treeDef>
-        </li>
-        <li Class="ThinkNode_Subtree">
-          <treeDef>BurningResponse</treeDef>
-        </li>
         <!-- <li Class="ThinkNode_Subtree"> -->
           <!-- <treeDef>MentalStateCritical</treeDef> -->
         <!-- </li> -->
@@ -36,16 +44,18 @@
         <!-- Do a queued job -->
         <li Class="ThinkNode_QueuedJob" />
 
-        <!-- Wild animals dig out if no path to map edge and starving -->
-		<li Class="ThinkNode_ConditionalStarving">
+		<!-- <li Class="ThinkNode_ConditionalStarving"> -->
 			
-			<subNodes>
+			<!-- <subNodes> -->
 				<li Class="ThinkNode_Subtree">
 				  <treeDef>SatisfyBasicNeeds</treeDef>
 				</li>
-			</subNodes>
+			<!-- </subNodes> -->
 			
-		</li>
+		<!-- </li> -->
+		
+        <!-- dig out if no path to map edge and starving -->
+		
 		<li Class="ThinkNode_ConditionalStarving">
 			<subNodes>
 				<li Class="ThinkNode_Subtree">

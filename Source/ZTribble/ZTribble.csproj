@@ -51,11 +51,19 @@
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompProperties_TribbleSpawner.cs" />
     <Compile Include="CompTribbleSpawner.cs" />
+    <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="IncidentTriggerPatches.cs" />
+    <Compile Include="IncidentWorker_Tribbles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TribbleUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
