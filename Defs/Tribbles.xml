@@ -9,6 +9,7 @@
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
       <ComfyTemperatureMax>80</ComfyTemperatureMax>
     </statBases>
+    <tradeability>None</tradeability>
     <tools>
       <li>
         <label>head</label>
@@ -56,9 +57,6 @@
       <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
-    <tradeTags>
-      <li>AnimalExotic</li>
-    </tradeTags>
   </ThingDef>
 
 
@@ -100,11 +98,13 @@
         <bodyGraphicData>
           <texPath>ZTrib/Tribble/Tribble</texPath>
           <drawSize>0.8</drawSize>
-          <color>(130,112,96)</color>
-          <shadowData>
-            <volume>(0.32, 0.35, 0.32)</volume>
-            <offset>(0,0,0)</offset>
-          </shadowData>
+          <!-- <color>(130,112,96)</color> -->
+          <!-- <color>(94,77,62)</color> -->
+          <color>(117,96,77)</color>
+          <!-- <shadowData> -->
+            <!-- <volume>(0.32, 0.35, 0.32)</volume> -->
+            <!-- <offset>(0,0,0)</offset> -->
+          <!-- </shadowData> -->
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>ZTrib/Tribble/Tribble</texPath>
