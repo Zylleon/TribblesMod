@@ -23,23 +23,11 @@ namespace ZTribble
         }
 
 
-        public static void ResetInterval(IncidentParms parms)
+        public static void ResetInterval(Map map)
         {
-
-            Log.Message("Resetting");
-            //Dictionary<IncidentDef, int> lastFireTicks = parms.target.StoryState.lastFireTicks;
-            IncidentDef def = IncidentDef.Named("ZTrib_TribbleArrival");
-
-            int ticksGame = Find.TickManager.TicksGame;
-
-            //Dictionary<IncidentDef, int> lastFireTicks = parms.target.StoryState.lastFireTicks;
-
-            parms.target.StoryState.lastFireTicks[def] = ticksGame;
-
-
-
-            
-
+            FiringIncident fi = new FiringIncident();
+            fi = new FiringIncident(IncidentDef.Named("ZTrib_TribbleArrival"), null, null);
+            map.StoryState.Notify_IncidentFired(fi);
         }
 
 

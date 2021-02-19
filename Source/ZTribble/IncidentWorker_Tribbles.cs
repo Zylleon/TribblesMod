@@ -40,14 +40,17 @@ namespace ZTribble
 			{
 				return false;
 			}
-			//int freeColonistsCount = map.mapPawns.FreeColonistsCount;
-			//float randomInRange = CountPerColonistRange.RandomInRange;
-			//int num = Mathf.Clamp(GenMath.RoundRandom((float)freeColonistsCount * randomInRange), 1, 10);
+
 
 			IntVec3 loc = CellFinder.RandomClosewalkCellNear(result, map, 10);
 			((Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(tribble), loc, map)).needs.food.CurLevelPercentage = 1f;
 
-			//SendStandardLetter("LetterLabelBeaversArrived".Translate(), "BeaversArrived".Translate(), LetterDefOf.ThreatSmall, parms, new TargetInfo(result, map));
+
+			//if(ZTribbleSettings.flagNotifyPlayer)
+   //         {
+			//	SendStandardLetter("ZTrib_LetterLabelTribblesArrived".Translate(), "ZTrib_TribblesArrived".Translate(), LetterDefOf.ThreatBig, parms, new TargetInfo(result, map));
+			//}
+
 			return true;
 		}
 	}

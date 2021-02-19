@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Settings -->
+  <ZTrib_ModName>Tribbles</ZTrib_ModName>
+  
+  <ZTrib_SpawnOptions>Tribbles can spawn from:</ZTrib_SpawnOptions>
+  
+  <ZTrib_AllowTradeship>Orbital traders</ZTrib_AllowTradeship>
+  <ZTrib_AllowAncientDanger>Ancient dangers</ZTrib_AllowAncientDanger>
+  <ZTrib_ShipChunk>Ship chunks</ZTrib_ShipChunk>
+  
+  
+  <!-- <ZTrip_NotifyPlayer>Notify you when tribbles spawn</ZTrip_NotifyPlayer> -->
+ 
+
+  
+  <ZTrib_LetterLabelTribblesArrived>Mad {ANIMAL_labelShort}</ZTrib_LetterLabelTribblesArrived>
+  <ZTrib_TribblesArrived>A local {ANIMAL_label} has gone mad. It will attack everyone it sees.</ZTrib_TribblesArrived>
+  
+  
+
+</LanguageData>

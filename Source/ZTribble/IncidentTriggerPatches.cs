@@ -19,6 +19,15 @@ namespace ZTribble
     {
         static void Postfix(Thing toGive, int countToGive, Pawn playerNegotiator)
         {
+            if(!ZTribbleSettings.flagTradeship)
+            {
+                return;
+            }
+            if (Rand.Chance(0.9f))
+            {
+                return;
+            }
+
             Map map = playerNegotiator.Map;
 
             IntVec3 loc = DropCellFinder.TradeDropSpot(map);
@@ -28,6 +37,8 @@ namespace ZTribble
 
             // spawn extra drop pod containing tribble
             TradeUtility.SpawnDropPod(loc, map, tribble);
+
+            TribbleUtility.ResetInterval(map);
         }
     }
 
@@ -39,14 +50,47 @@ namespace ZTribble
     {
         static void Postfix(ref List<Thing> __result)
         {
+            if (!ZTribbleSettings.flagAncientDanger)
+            {
+                return;
+            }
 
-            //TODO: add filtering and randomness! IMPORTANT
+            if(Rand.Chance(0.65f))
+            {
+                return;
+            }
 
             Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("ZTrib_Tribble"), null);
 
             __result.Add(pawn);
+
+            //TribbleUtility.ResetInterval();
         }
     }
+
+
+    // ship chunks
+    [HarmonyPatch(typeof(RimWorld.IncidentWorker_ShipChunkDrop), "SpawnChunk")]
+    internal static class IncidentWorker_ShipChunkDrop
+    {
+        static void Postfix(IntVec3 pos, Map map)
+        {
+            if (!ZTribbleSettings.flagShipChunk)
+            {
+                return;
+            }
+            if (Rand.Chance(0.85f))
+            {
+                return;
+            }
+
+            Pawn tribble = PawnGenerator.GeneratePawn(PawnKindDef.Named("ZTrib_Tribble"), null);
+
+            GenSpawn.Spawn(tribble, pos, map);
+            TribbleUtility.ResetInterval(map);
+        }
+    }
+
 
 
 
