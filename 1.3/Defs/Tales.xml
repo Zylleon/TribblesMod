@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <TaleDef>
+    <defName>ZTrib_Tribbles</defName>
+    <label>tribbles</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <baseInterest>5</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun->[PAWN_nameDef]'s [Community] being infested by tribbles</li>
+		
+		<li>circumstance_phrase->completely encircling a [Community]</li>
+        <li>circumstance_phrase->advancing over a [TerrainFeature]</li>
+        <li>circumstance_phrase->[eating] [Quantity_adjphrase] [food]</li>
+        <li>circumstance_phrase->multiplying at an incredible rate</li>
+        <li>circumstance_phrase->[eating]</li>
+		
+        <li>desc_sentence->[PAWN_nameDef] is [behaviour] by the [pack_adj][pack_noun]</li>
+		
+		<li>image->[Quantity_adjphrase] tribbles [circumstance_phrase]</li>
+		<li>image->the [pack_adj] [pack_noun] [circumstance_phrase]</li>
+        <li>image->a tide of tribbles [circumstance_phrase]</li>
+		
+        <li>desc_sentence->All food in the area has been devoured.</li>
+        <li>desc_sentence->The landscape is [results_adj]</li>
+        <li>desc_sentence->[PAWN_nameDef] organizes a hunt.</li>
+        <li>desc_sentence->[PAWN_nameDef] wears a [AdjectiveAngsty] expression.</li>
+        <li>desc_sentence->[PAWN_nameDef] looks hungry.</li>
+		<li>desc_sentence->[Quantity_adjphrase] starving [Animal]s surround the scene.</li>
+		
+        <li>eating->consuming</li>
+        <li>eating->devouring</li>
+        <li>eating->gorging on</li>
+        <li>eating->eating</li>
+		
+		<li>behaviour->crushed</li>
+		<li>behaviour->overwhelmed</li>
+		<li>behaviour->buried</li>
+		
+		<li>pack_adj->seething</li>
+		<li>pack_adj->swarming</li>
+		<li>pack_adj->devouring</li>
+		<li>pack_adj->all-consuming</li>
+		<li>pack_adj->endless</li>
+		
+		<li>pack_noun->horde</li>
+		<li>pack_noun->mass</li>
+		<li>pack_noun->multitude</li>
+		<li>pack_noun->swarm</li>
+		<li>pack_noun->tide</li>
+		
+		<li>results_adj->devastated</li>
+		<li>results_adj->annihilated</li>
+		<li>results_adj->swept bare</li>
+		
+		<li>food->food</li>
+		<li>food->vegetables</li>
+		<li>food->meat</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+
+</Defs>

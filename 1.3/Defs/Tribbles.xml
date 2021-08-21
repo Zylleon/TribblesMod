@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+<!-- Bases -->
+  <ThingDef Abstract="True" ParentName="AnimalThingBase" Name="ZTrib_BaseTribble">
+    <statBases>
+      <MoveSpeed>2.0</MoveSpeed>
+      <MarketValue>30</MarketValue>
+      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <ComfyTemperatureMax>80</ComfyTemperatureMax>
+      <MeatAmount>0</MeatAmount>
+    </statBases>
+    <tradeability>None</tradeability>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>0.9</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>ZTrib_Tribble</thinkTreeMain>
+      <thinkTreeConstant>ZTrib_Tribble_Constant</thinkTreeConstant>
+      <canBePredatorPrey>false</canBePredatorPrey>
+	  
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHungerRate>3.5</baseHungerRate>
+      <baseHealthScale>0.4</baseHealthScale>
+      <foodType>OmnivoreRoughAnimal, DendrovoreAnimal</foodType>
+      <useMeatFrom>Squirrel</useMeatFrom>
+      <herdMigrationAllowed>false</herdMigrationAllowed>
+      <leatherDef>Leather_Light</leatherDef>
+      <wildness>0.50</wildness>
+	  <hasGenders>false</hasGenders>
+      <trainability>None</trainability>
+      <petness>0</petness>
+      <nuzzleMtbHours>3</nuzzleMtbHours>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0</manhunterOnDamageChance>
+      <lifeExpectancy>2</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0</minAge>
+          <soundWounded>ZTrib_Pawn_Tribble_Wounded</soundWounded>
+          <soundDeath>ZTrib_Pawn_Tribble_Death</soundDeath>
+          <soundCall>ZTrib_Pawn_Tribble_Call</soundCall>
+          <soundAngry>ZTrib_Pawn_Tribble_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+
+
+  <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="ZTrib_TribbleBase">
+    <combatPower>33</combatPower>
+    <ecoSystemWeight>0.25</ecoSystemWeight>
+    <!-- <defaultFactionType>PlayerColony</defaultFactionType> -->
+    <canArriveManhunter>false</canArriveManhunter>
+  </PawnKindDef>
+
+<!-- default stribble-->
+
+  
+  <ThingDef ParentName="ZTrib_BaseTribble">
+    <defName>ZTrib_Tribble</defName>
+	<label>tribble</label>
+	<description>A tribble.</description>
+	<!-- <thingClass>ThingWithComps</thingClass> -->
+	<useHitPoints>false</useHitPoints>
+	<selectable>false</selectable>
+	
+    <uiIconScale>1.5</uiIconScale>
+	<comps>
+		<li Class="ZTribble.CompProperties_TribbleSpawner">
+			<!-- <baseSpawnInterval>0.3~1.0</baseSpawnInterval> -->
+			<baseSpawnInterval>0.0~1.4</baseSpawnInterval>
+		</li>
+    </comps>
+  </ThingDef>
+    
+	
+  <PawnKindDef ParentName="ZTrib_TribbleBase">
+    <defName>ZTrib_Tribble</defName>
+    <label>tribble</label>
+    <race>ZTrib_Tribble</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>ZTrib/Tribble/Tribble</texPath>
+          <drawSize>0.8</drawSize>
+          <!-- <color>(130,112,96)</color> -->
+          <!-- <color>(94,77,62)</color> -->
+          <color>(117,96,77)</color>
+          <!-- <shadowData> -->
+            <!-- <volume>(0.32, 0.35, 0.32)</volume> -->
+            <!-- <offset>(0,0,0)</offset> -->
+          <!-- </shadowData> -->
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>ZTrib/Tribble/Tribble</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>
