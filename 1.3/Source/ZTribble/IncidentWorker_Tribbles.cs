@@ -46,10 +46,11 @@ namespace ZTribble
 			((Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(tribble), loc, map)).needs.food.CurLevelPercentage = 1f;
 
 
-			//if(ZTribbleSettings.flagNotifyPlayer)
-   //         {
-			//	SendStandardLetter("ZTrib_LetterLabelTribblesArrived".Translate(), "ZTrib_TribblesArrived".Translate(), LetterDefOf.ThreatBig, parms, new TargetInfo(result, map));
-			//}
+
+			if (ZTribbleSettings.flagNotifyPlayer)
+			{
+				Find.LetterStack.ReceiveLetter("ZTrib_LetterLabelTribblesArrived".Translate(), "ZTrib_TribblesArrived".Translate(), LetterDefOf.ThreatSmall);
+			}
 
 			return true;
 		}

@@ -11,7 +11,7 @@
   <ZTrib_ShipChunk>Ship chunks</ZTrib_ShipChunk>
   
   
-  <!-- <ZTrip_NotifyPlayer>Notify you when tribbles spawn</ZTrip_NotifyPlayer> -->
+	<ZTrib_NotifyPlayer>Notify you when tribbles spawn</ZTrib_NotifyPlayer>
  
 
   

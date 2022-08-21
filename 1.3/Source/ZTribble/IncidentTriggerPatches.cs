@@ -10,9 +10,6 @@ using Verse;
 namespace ZTribble
 {
 
-    //TODO: add filtering and randomness! IMPORTANT
-
-
     //Orbital traders
     [HarmonyPatch(typeof(RimWorld.TradeShip), "GiveSoldThingToPlayer")]
     internal static class GiveSoldThingToPlayer
@@ -37,6 +34,14 @@ namespace ZTribble
 
             // spawn extra drop pod containing tribble
             TradeUtility.SpawnDropPod(loc, map, tribble);
+
+            if(ZTribbleSettings.flagNotifyPlayer)
+            {
+                //LetterDef letter = LetterDefOf.ThreatSmall;
+                //letter.label = "ZTrib_LetterLabelTribblesArrived".Translate();
+                //letter.text;
+                Find.LetterStack.ReceiveLetter("ZTrib_LetterLabelTribblesArrived".Translate(), "ZTrib_TribblesArrived".Translate(), LetterDefOf.ThreatSmall);
+            }
 
             TribbleUtility.ResetInterval(map);
         }
@@ -64,6 +69,10 @@ namespace ZTribble
 
             __result.Add(pawn);
 
+            if (ZTribbleSettings.flagNotifyPlayer)
+            {
+                Find.LetterStack.ReceiveLetter("ZTrib_LetterLabelTribblesArrived".Translate(), "ZTrib_TribblesArrived".Translate(), LetterDefOf.ThreatSmall);
+            }
             //TribbleUtility.ResetInterval();
         }
     }
@@ -87,6 +96,11 @@ namespace ZTribble
             Pawn tribble = PawnGenerator.GeneratePawn(PawnKindDef.Named("ZTrib_Tribble"), null);
 
             GenSpawn.Spawn(tribble, pos, map);
+
+            if (ZTribbleSettings.flagNotifyPlayer)
+            {
+                Find.LetterStack.ReceiveLetter("ZTrib_LetterLabelTribblesArrived".Translate(), "ZTrib_TribblesArrived".Translate(), LetterDefOf.ThreatSmall);
+            }
             TribbleUtility.ResetInterval(map);
         }
     }
