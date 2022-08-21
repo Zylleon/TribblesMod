@@ -51,6 +51,7 @@ namespace ZTribble
             inRect.width = 450f;
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(inRect);
+            listing.Label("ZTrib_SpawnOptions".Translate());
             listing.CheckboxLabeled("ZTrib_AllowTradeship".Translate(), ref ZTribbleSettings.flagTradeship);
             listing.CheckboxLabeled("ZTrib_AllowAncientDanger".Translate(), ref ZTribbleSettings.flagAncientDanger);
             listing.CheckboxLabeled("ZTrib_ShipChunk".Translate(), ref ZTribbleSettings.flagShipChunk);

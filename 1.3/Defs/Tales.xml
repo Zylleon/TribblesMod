@@ -7,7 +7,7 @@
     <label>tribbles</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>5</baseInterest>
+    <baseInterest>10</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[PAWN_nameDef]'s [Community] being infested by tribbles</li>
@@ -51,6 +51,8 @@
 		<li>pack_noun->multitude</li>
 		<li>pack_noun->swarm</li>
 		<li>pack_noun->tide</li>
+		<li>pack_noun->vortex</li>
+		<li>pack_noun->river</li>
 		
 		<li>results_adj->devastated</li>
 		<li>results_adj->annihilated</li>

@@ -15,8 +15,8 @@
  
 
   
-  <ZTrib_LetterLabelTribblesArrived>Mad {ANIMAL_labelShort}</ZTrib_LetterLabelTribblesArrived>
-  <ZTrib_TribblesArrived>A local {ANIMAL_label} has gone mad. It will attack everyone it sees.</ZTrib_TribblesArrived>
+  <ZTrib_LetterLabelTribblesArrived>Tribbles</ZTrib_LetterLabelTribblesArrived>
+  <ZTrib_TribblesArrived>A tribble has arrived. Exterminate it quickly before it starts to breed.</ZTrib_TribblesArrived>
   
   
 

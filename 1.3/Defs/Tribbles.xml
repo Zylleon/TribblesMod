@@ -8,7 +8,9 @@
       <MarketValue>30</MarketValue>
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
       <ComfyTemperatureMax>80</ComfyTemperatureMax>
-      <MeatAmount>0</MeatAmount>
+      <Flammability>3.0</Flammability>
+      <ToxicSensitivity>4.0</ToxicSensitivity>
+      <MeatAmount>1</MeatAmount>
     </statBases>
     <tradeability>None</tradeability>
     <tools>
@@ -31,9 +33,9 @@
       <body>QuadrupedAnimalWithPawsAndTail</body>
       <baseBodySize>0.2</baseBodySize>
       <baseHungerRate>3.5</baseHungerRate>
-      <baseHealthScale>0.4</baseHealthScale>
+      <baseHealthScale>0.3</baseHealthScale>
       <foodType>OmnivoreRoughAnimal, DendrovoreAnimal</foodType>
-      <useMeatFrom>Squirrel</useMeatFrom>
+      <!-- <useMeatFrom>Squirrel</useMeatFrom> -->
       <herdMigrationAllowed>false</herdMigrationAllowed>
       <leatherDef>Leather_Light</leatherDef>
       <wildness>0.50</wildness>
@@ -99,13 +101,7 @@
         <bodyGraphicData>
           <texPath>ZTrib/Tribble/Tribble</texPath>
           <drawSize>0.8</drawSize>
-          <!-- <color>(130,112,96)</color> -->
-          <!-- <color>(94,77,62)</color> -->
           <color>(117,96,77)</color>
-          <!-- <shadowData> -->
-            <!-- <volume>(0.32, 0.35, 0.32)</volume> -->
-            <!-- <offset>(0,0,0)</offset> -->
-          <!-- </shadowData> -->
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>ZTrib/Tribble/Tribble</texPath>
