@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <SoundDef>
+    <defName>ZTrib_Pawn_Tribble_Call</defName>  
+    <context>MapOnly</context>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ZTrib/Pawn_Tribble_Call</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>25~27</volumeRange>      
+        <!-- <pitchRange>0.9082353~1.114706</pitchRange>       -->
+        <distRange>0~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ZTrib_Pawn_Tribble_Angry</defName>  
+    <context>MapOnly</context>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ZTrib/Pawn_Tribble_Angry</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>35~35</volumeRange>      
+        <!-- <pitchRange>0.9311765~1.091765</pitchRange>       -->
+        <distRange>0~70</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ZTrib_Pawn_Tribble_Death</defName>  
+    <context>MapOnly</context>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ZTrib/Pawn_Tribble_Death</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>35~35</volumeRange>      
+        <!-- <pitchRange>1.504706~1.596471</pitchRange>       -->
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ZTrib_Pawn_Tribble_Wounded</defName>  
+    <context>MapOnly</context>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ZTrib/Pawn_Tribble_Wounded</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>21~21</volumeRange>      
+        <!-- <pitchRange>1.206471~1</pitchRange>       -->
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+
+</Defs>
