@@ -9,7 +9,8 @@
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
       <ComfyTemperatureMax>80</ComfyTemperatureMax>
       <Flammability>3.0</Flammability>
-      <ToxicResistance>0.0</ToxicResistance>
+      <ToxicResistance>0.1</ToxicResistance>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.1</ToxicEnvironmentResistance>
       <MeatAmount>1</MeatAmount>
     </statBases>
     <tradeability>None</tradeability>
