@@ -14,6 +14,8 @@
 	<ZTrib_NotifyPlayer>Notify you when tribbles spawn</ZTrib_NotifyPlayer>
  
 
+  <ZTrib_Destroy>Destroy ALL tribbles</ZTrib_Destroy>
+  <ZTrib_DestroyCount>tribbles have been destroyed.</ZTrib_DestroyCount>
   
   <ZTrib_LetterLabelTribblesArrived>Tribbles</ZTrib_LetterLabelTribblesArrived>
   <ZTrib_TribblesArrived>A tribble has arrived. Exterminate it quickly before it starts to breed.</ZTrib_TribblesArrived>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -60,12 +61,35 @@ namespace ZTribble
             listing.CheckboxLabeled("ZTrib_NotifyPlayer".Translate(), ref ZTribbleSettings.flagNotifyPlayer);
 
 
+            listing.Gap();
+
+            if (listing.ButtonText("ZTrib_Destroy".Translate()))
+            {
+                DestroyAllTribbles();
+
+               
+
+            }
+
+
             listing.End();
 
             base.DoSettingsWindowContents(inRect);
         }
 
+        public void DestroyAllTribbles()
+        {
+            int tribCount = 0;
 
+            while (PawnsFinder.AllMaps_Spawned.Where(p => p.kindDef == PawnKindDef.Named("ZTrib_Tribble")).Any())
+            {
+                Pawn p = PawnsFinder.AllMaps_Spawned.Where(t => t.kindDef == PawnKindDef.Named("ZTrib_Tribble")).FirstOrDefault();
+                p.Destroy();
+                tribCount++;
+            }
+
+            Messages.Message(tribCount + " " + "ZTrib_DestroyCount".Translate(), MessageTypeDefOf.TaskCompletion, false);
+        }
     }
 
 
