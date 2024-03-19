@@ -18,6 +18,7 @@
 	<li>1.4</li>
 	<li>1.5</li>
   </supportedVersions>
+	<modIconPath IgnoreIfNoMatchingField="True">GUI/ZModLogo</modIconPath>
   <description>Tribbles are small, docile, useless creatures that reproduce asexually. They will arrive at your colony with no warning. Keep watch and exterminate them immediately before they devour the map.
   
 Tribbles eat continuously and multiply exponentially. All tribbles are capable of using doors, and will dig their way out if trapped. Tame tribbles will ignore zone restrictions and use forbidden items. Tribbles will only willingly leave the map once every last bit of food has been devoured.
