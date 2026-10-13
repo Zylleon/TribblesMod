@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
+using static ZTribble.HarmonyPatches;
 
 namespace ZTribble
 {
@@ -14,6 +15,7 @@ namespace ZTribble
         public static bool flagTradeship = true;
         public static bool flagAncientDanger = true;
         public static bool flagShipChunk = true;
+        public static float maxAllowedTribbles = 2f;
 
         public static bool flagNotifyPlayer = false;
 
@@ -22,6 +24,7 @@ namespace ZTribble
             Scribe_Values.Look(ref flagTradeship, "flagTradeship", true);
             Scribe_Values.Look(ref flagAncientDanger, "flagAncientDanger", true);
             Scribe_Values.Look(ref flagShipChunk, "flagShipChunk", true);
+            //Scribe_Values.Look(ref maxAllowedTribbles, "maxAllowedTribbles", 2f);
 
             Scribe_Values.Look(ref flagNotifyPlayer, "flagNotifyPlayer", false);
 
@@ -57,6 +60,9 @@ namespace ZTribble
             listing.CheckboxLabeled("ZTrib_AllowAncientDanger".Translate(), ref ZTribbleSettings.flagAncientDanger);
             listing.CheckboxLabeled("ZTrib_ShipChunk".Translate(), ref ZTribbleSettings.flagShipChunk);
 
+            //listing.SliderLabeled("ZTrib_MaxTribbles", ZTribbleSettings.maxAllowedTribbles, 1f, 15f);
+
+
             listing.GapLine();
             listing.CheckboxLabeled("ZTrib_NotifyPlayer".Translate(), ref ZTribbleSettings.flagNotifyPlayer);
 
@@ -66,9 +72,6 @@ namespace ZTribble
             if (listing.ButtonText("ZTrib_Destroy".Translate()))
             {
                 DestroyAllTribbles();
-
-               
-
             }
 
 
